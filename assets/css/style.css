@@ -378,6 +378,40 @@ section {
   margin-bottom: 0;
 }
 
+.one {
+  width: 100%;
+  height: auto;
+  position: relative;
+  aspect-ratio: 16 / 9;
+}
+
+.two {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+.one video,
+.one img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.fade {
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+span.highlight {
+  background-color: #ffffd0;
+}
+
 /*--------------------------------------------------------------
 # Facts
 --------------------------------------------------------------*/
