@@ -378,6 +378,7 @@ section {
   margin-bottom: 0;
 }
 
+/* for fade */
 .one {
   width: 100%;
   height: auto;
@@ -410,6 +411,53 @@ section {
 
 span.highlight {
   background-color: #ffffd0;
+}
+
+/*button*/
+.filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+.filters button {
+  border: 1px solid color-mix(in oklab, canvastext 25%, transparent);
+  background: color-mix(in oklab, canvas 90%, transparent);
+  color: inherit;
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.filters button:hover {
+  background: color-mix(in oklab, canvastext 8%, canvas);
+}
+.filters button.active {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px; /* spacing between rows (since rows have backgrounds) */
+}
+
+tr.hidden {
+  display: none;
+}
+td {
+  vertical-align: middle;
+}
+tr.empty-state td {
+  text-align: center;
+  padding: 24px;
+  color: color-mix(in oklab, canvastext 40%, transparent);
+  font-style: italic;
+  background: transparent;
+  border: 1px dashed color-mix(in oklab, canvastext 25%, transparent);
+  border-radius: 8px;
 }
 
 /*--------------------------------------------------------------

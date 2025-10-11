@@ -52,12 +52,7 @@
         <div class="social-links mt-3 text-center">
           <a href="https://scholar.google.com/citations?user=xQujI5AAAAAJ&hl=en" class="google-scholar"><i class="bx bxl-google"></i></a>
           <a href="https://twitter.com/GaoLon275303" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <!-- <a href="https://www.linkedin.com/in/zhongyu-li-b2b8aa160/" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
-
-          <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
-          <!-- <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> -->
-          <!-- <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> -->
-          <!-- <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
+          <a href="https://www.linkedin.com/in/long-xu-9aa497287/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
         </div>
       </div>
 
@@ -199,14 +194,24 @@
 
     <section id="publications" class="portfolio section-bg">
       <div class="container">
-
         <div class="section-title">
           <h2>Researches</h2>
           <p><sup>†</sup>Equal Contribution, <sup>*</sup>Project Leader</p>
+          <p>
+            <div class="filters" role="tablist" aria-label="Filter items by category">
+              <button class="active" data-filter="all" role="tab" aria-selected="true">All</button>
+              <button data-filter="selected" role="tab" aria-selected="false">Selected</button>
+              <button data-filter="uneven" role="tab" aria-selected="false">Uneven Terrain</button>
+              <button data-filter="multip" role="tab" aria-selected="false">Multi-articulated</button>
+              <button data-filter="legged" role="tab" aria-selected="false">Legged Control</button>
+              <button data-filter="others" role="tab" aria-selected="false">Othor Topics</button>
+            </div>
+          </p>
         </div>
 
         <table>
-          <tr bgcolor="#ffffd0">
+          <tbody id="projects">
+          <tr bgcolor="#ffffd0" data-categories="selected uneven">
             <td style="padding:20px;width:25%;vertical-align:middle"><img src="assets/img/uenven_e2e.png" alt="" width="260"/></td>
             <td style="padding:0px;width:75%;vertical-align:middle">
               <strong>Learning Trajectory Generation on Uneven Terrain with Differentiable Trajectory Optimization and Manifold</strong>
@@ -219,7 +224,7 @@
             </td>
           </tr>
 
-          <tr bgcolor="#ffffd0">
+          <tr bgcolor="#ffffd0" data-categories="selected multip">
             <td style="padding:20px;width:25%;vertical-align:middle"><img src="assets/img/nmoma.png" alt="" width="260"/></td>
             <td style="padding:0px;width:75%;vertical-align:middle">
               <strong>Primitive-based Truncated Diffusion for Efficient Trajectory Generation of Mobile Manipulators</strong>
@@ -232,7 +237,7 @@
             </td>
           </tr>
 
-          <tr onmouseout="topay_stop()" onmouseover="topay_start()" bgcolor="#ffffd0">
+          <tr onmouseout="topay_stop()" onmouseover="topay_start()" bgcolor="#ffffd0" data-categories="selected multip">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one" >
                 <div class="two" id='topay_image' >
@@ -263,13 +268,14 @@
               <br>
               <a href="https://arxiv.org/pdf/2507.02761">Paper</a>
               /
-              <a href="https://github.com/tmoma/tmoma/">Code</a>
+              <a href="https://github.com/Topay/tmoma/">Code</a>
+              <img src="https://img.shields.io/github/stars/TopAY-Planner/TopAY?style=social" alt="GitHub stars">
               <br>
               <p>A classical trajectory planner for differential drive mobile manipulator.</p>
             </td>
           </tr>
 
-          <tr onmouseout="trailer_stop()" onmouseover="trailer_start()" bgcolor="#ffffd0">
+          <tr onmouseout="trailer_stop()" onmouseover="trailer_start()" bgcolor="#ffffd0" data-categories="selected multip">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one" >
                 <div class="two" id='trailer_image' >
@@ -303,12 +309,13 @@
               <a href="https://www.youtube.com/watch?v=TzA36cAEPDU">Video</a>
               /
               <a href="https://github.com/Tracailer/Tracailer/">Code</a>
+              <img src="https://img.shields.io/github/stars/Tracailer/Tracailer?style=social" alt="GitHub stars">
               <br>
               <p>A real-time trajectory planner for tractor-trailer robots in unstructured environments.</p>
             </td>
           </tr>
 
-          <tr onmouseout="e2e_stop()" onmouseover="e2e_start()" bgcolor="#ffffd0">
+          <tr onmouseout="e2e_stop()" onmouseover="e2e_start()" bgcolor="#ffffd0" data-categories="selected others">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one" >
                 <div class="two" id='e2e_image' >
@@ -347,7 +354,7 @@
             </td>
           </tr>
 
-          <tr onmouseout="dog_stop()" onmouseover="dog_start()" bgcolor="#ffffd0">
+          <tr onmouseout="dog_stop()" onmouseover="dog_start()" bgcolor="#ffffd0" data-categories="selected legged">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one" >
                 <div class="two" id='dog_image' >
@@ -384,7 +391,7 @@
             </td>
           </tr>
 
-          <tr bgcolor="#ffffd0">
+          <tr bgcolor="#ffffd0" data-categories="selected uneven">
             <td style="padding:20px;width:25%;vertical-align:middle"><img src="assets/img/fsgp.png" alt="" width="260"/></td>
             <td style="padding:0px;width:75%;vertical-align:middle">
               <strong>Real-time Spatial-temporal Traversability Assessment via Feature-based Sparse Gaussian Process</strong>
@@ -396,12 +403,13 @@
               <a href="https://arxiv.org/pdf/2503.04134">Paper</a>
               /
               <a href="https://github.com/ZJU-FAST-Lab/FSGP_BGK/">Code</a>
+              <img src="https://img.shields.io/github/stars/ZJU-FAST-Lab/FSGP_BGK?style=social" alt="GitHub stars">
               <br>
               <p>A real-time traversability assessment via feature-based sparse Gaussian process.</p>
             </td>
           </tr>
 
-          <tr onmouseout="seb_stop()" onmouseover="seb_start()" bgcolor="#ffffd0">
+          <tr onmouseout="seb_stop()" onmouseover="seb_start()" bgcolor="#ffffd0" data-categories="selected uneven">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one" >
                 <div class="two" id='seb_image' >
@@ -435,12 +443,13 @@
               <a href="https://www.bilibili.com/video/BV1yBRpYmEmX/">Video</a>
               /
               <a href="https://github.com/ZJU-FAST-Lab/seb_naver/">Code</a>
+              <img src="https://img.shields.io/github/stars/ZJU-FAST-Lab/seb_naver?style=social" alt="GitHub stars">
               <br>
               <p>Real-time SE(2)-based local navigation framework for car-like robots on uneven terrain.</p>
             </td>
           </tr>
 
-          <tr onmouseout="iros24_stop()" onmouseover="iros24_start()" bgcolor="#ffffd0">
+          <tr onmouseout="iros24_stop()" onmouseover="iros24_start()" bgcolor="#ffffd0" data-categories="selected others">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one" >
                 <div class="two" id='iros24_image' >
@@ -474,12 +483,13 @@
               <a href="https://www.youtube.com/watch?v=SwH-YG5q-DE">Video</a>
               /
               <a href="https://github.com/ZJU-FAST-Lab/LF-3PM/">Code</a>
+              <img src="https://img.shields.io/github/stars/ZJU-FAST-Lab/LF-3PM?style=social" alt="GitHub stars">
               <br>
               <p>Robots with limited FOV can avoid some localization-unfriendly space when navigation.</p>
             </td>
           </tr>
 
-          <tr onmouseout="tits_stop()" onmouseover="tits_start()" bgcolor="#ffffd0">
+          <tr onmouseout="tits_stop()" onmouseover="tits_start()" data-categories="others">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one" >
                 <div class="two" id='tits_image' >
@@ -513,12 +523,13 @@
               <a href="https://www.youtube.com/watch?v=X0V0bGuMsGg">Video</a>
               /
               <a href="https://github.com/ZJU-FAST-Lab/Dftpav">Code</a>
+              <img src="https://img.shields.io/github/stars/ZJU-FAST-Lab/Dftpav?style=social" alt="GitHub stars">
               <br>
               <p>A trajectory planner based on differential flatness for car-like robot.</p>
             </td>
           </tr>
 
-          <tr onmouseout="cswarm_stop()" onmouseover="cswarm_start()" bgcolor="#ffffd0">
+          <tr onmouseout="cswarm_stop()" onmouseover="cswarm_start()" data-categories="others">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one" >
                 <div class="two" id='cswarm_image' >
@@ -552,12 +563,13 @@
               <a href="https://www.youtube.com/watch?v=qdYr3BKHsdM">Video</a>
               /
               <a href="https://github.com/ZJU-FAST-Lab/Car-like-Robotic-swarm">Code</a>
+              <img src="https://img.shields.io/github/stars/ZJU-FAST-Lab/Car-like-Robotic-swarm?style=social" alt="GitHub stars">
               <br>
               <p>A trajectory planner for car-like robots swarm.</p>
             </td>
           </tr>
 
-          <tr onmouseout="uneven_stop()" onmouseover="uneven_start()" bgcolor="#ffffd0">
+          <tr onmouseout="uneven_stop()" onmouseover="uneven_start()" bgcolor="#ffffd0" data-categories="selected uneven">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one" >
                 <div class="two" id='uneven_image' >
@@ -591,12 +603,13 @@
               <a href="https://www.youtube.com/watch?v=BPfoun_vQ4I&t">Video</a>
               /
               <a href="https://github.com/ZJU-FAST-Lab/uneven_planner">Code</a>
+              <img src="https://img.shields.io/github/stars/ZJU-FAST-Lab/uneven_planner?style=social" alt="GitHub stars">
               <br>
               <p>A trajectory planner for car-like robots on uneven terrain.</p>
             </td>
           </tr>
 
-          <tr onmouseout="icra2023_stop()" onmouseover="icra2023_start()" bgcolor="#ffffd0">
+          <tr onmouseout="icra2023_stop()" onmouseover="icra2023_start()" bgcolor="#ffffd0" data-categories="selected uneven">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one" >
                 <div class="two" id='icra2023_image' >
@@ -630,16 +643,22 @@
               <a href="https://www.youtube.com/watch?v=C6I_RDPmlxc">Video</a>
               /
               <a href="https://github.com/ZJU-FAST-Lab/3D2M-planner">Code</a>
+              <img src="https://img.shields.io/github/stars/ZJU-FAST-Lab/3D2M-planner?style=social" alt="GitHub stars">
               <br>
               <p>A trajectory planner for ground robots beyond 2D environment.</p>
             </td>
           </tr>
-          
+        </tbody>
         </table>
-        </div>
-
       </div>
+      
     </section><!-- End Portfolio Section -->
+    
+    <div style="text-align:center;">
+      <a href="https://mapmyvisitors.com/web/1bzxs" title="Visit tracker">
+        <img src="https://mapmyvisitors.com/map.png?d=AnYrlBlnROLUElfUNVb8BTdyGY3FA60d-4nB58LNW0M&cl=ffffff" />
+      </a>
+    </div>
 
   </main><!-- End #main -->
 
@@ -659,8 +678,6 @@
     </div>
   </footer><!-- End  Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
@@ -674,8 +691,73 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    // Configuration: how categories are separated in data-categories
+    // Supports space and comma separation
+    function parseCategories(attr) {
+      return (attr || '')
+        .split(/[,\s]+/)          // split on spaces or commas
+        .map(s => s.trim().toLowerCase())
+        .filter(Boolean);
+    }
+
+    const buttons = Array.from(document.querySelectorAll('.filters button'));
+    const tbody = document.getElementById('projects');
+    const rows = Array.from(tbody.querySelectorAll('tr')).filter(r => !r.classList.contains('empty-state'));
+    const emptyRow = tbody.querySelector('.empty-state');
+
+    function applyFilter(filter) {
+      const isAll = filter === 'all';
+
+      // Update active state on buttons and ARIA
+      buttons.forEach(btn => {
+        const active = btn.dataset.filter === filter;
+        btn.classList.toggle('active', active);
+        btn.setAttribute('aria-selected', String(active));
+      });
+
+      let visibleCount = 0;
+
+      rows.forEach(row => {
+        const cats = parseCategories(row.getAttribute('data-categories'));
+        const show = isAll ? true : cats.includes(filter.toLowerCase());
+        row.classList.toggle('hidden', !show);
+        if (show) visibleCount++;
+      });
+
+      // Toggle empty state
+      if (emptyRow) {
+        const none = visibleCount === 0;
+        emptyRow.classList.toggle('hidden', !none);
+        emptyRow.setAttribute('aria-hidden', String(!none));
+      }
+
+      // Announce count
+      tbody.setAttribute('aria-label', `${visibleCount} item(s) shown`);
+    }
+
+    // Wire up clicks
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => applyFilter(btn.dataset.filter));
+    });
+
+    // Optional: keyboard navigation among filter buttons
+    document.querySelector('.filters').addEventListener('keydown', (e) => {
+      const idx = buttons.indexOf(document.activeElement);
+      if (idx === -1) return;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        buttons[(idx + 1) % buttons.length].focus();
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        buttons[(idx - 1 + buttons.length) % buttons.length].focus();
+      }
+    });
+
+    // Initial
+    applyFilter('all');
+  </script>
 
 </body>
-
 
 </html>
