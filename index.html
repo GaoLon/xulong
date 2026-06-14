@@ -64,7 +64,7 @@
           <li><a href="#talks" class="nav-link scrollto"><i class="bx bx-video-recording"></i> <span>Talks & Presentations</span></a></li>
           <!-- <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Teaching & Services</span></a></li> -->
           <li><a href="#publications" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Publications</span></a></li>
-          <li><a href="assets/files/CV.pdf" class="nav-link scrollto"><i class="bx bxs-file-doc"></i> <span>CV</span></a></li>
+          <li><a href="assets/files/CV.pdf" class="nav-link scrollto"><i class="bx bxs-file-doc"></i> <span>CV (in Chinese)</span></a></li>
 
           <!-- <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li> -->
           <!-- <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li> -->
@@ -105,6 +105,8 @@
               I obtained my B.Eng. of Automation at Zhejiang University in 2022.
               <br>
               <br> My research interests include <strong>representation learning</strong> and <strong>representation learning for robotics</strong>.
+              <br>
+              <br> Now I am a research intern at <a href="https://www.galbot.com/">Galbot</a>, working with <a href="https://hughw19.github.io/">Prof. He Wang</a> and <a href="https://scholar.google.com/citations?user=X7M0I8kAAAAJ&hl=en">Zhizheng Zhang</a>.
               <br>
               <br> I am always happy to chat or collaborate with people with different backgrounds. If you are interested in my work, please feel free to reach out!
               <br>
@@ -176,7 +178,14 @@
           <h2>Talks & Presentations</h2>
           <table>
             <tr>
-              <!-- <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+              <td style="padding:20px;width:25%;vertical-align:middle"><iframe src="https://www.youtube.com/embed/xxx"></iframe></td>
+              <td style="padding:0px;width:75%;vertical-align:middle">
+                <h4><strong>Tracailer: An Efficient Trajectory Planner for Tractor-Trailer Robots in Unstructured Environments (To be uploaded)</strong></h4>
+                <i class="bx bx-right-arrow"></i>IEEE International Conference on Robotics and Automation (ICRA), Vienna, Austria, Jun. 2026
+                <br>
+              </td>
+            </tr>
+            <tr>
               <td style="padding:20px;width:25%;vertical-align:middle"><iframe src="https://www.youtube.com/embed/dIffX6O_zNE?si=I9HVl1rAvtFL0qTx"></iframe></td>
               <td style="padding:0px;width:75%;vertical-align:middle">
                 <h4><strong>SF-TIM: A Simple Framework for Enhancing Quadrupedal Robot Jumping Agility by Combining Terrain Imagination and Measurement</strong></h4>
@@ -185,7 +194,6 @@
               </td>
             </tr>
             <tr>
-              <!-- <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
               <td style="padding:20px;width:25%;vertical-align:middle"><iframe src="https://www.youtube.com/embed/TIgxi6FhTNo?si=EysTaDx43PoIMWLm"></iframe></td>
               <td style="padding:0px;width:75%;vertical-align:middle">
                 <h4><strong>An Efficient Trajectory Planner for Car-like Robots on Uneven Terrain</strong></h4>
@@ -218,27 +226,85 @@
 
         <table>
           <tbody id="projects">
+          <tr onmouseout="gif_stop()" onmouseover="gif_start()" bgcolor="#ffffd0" data-categories="selected multip">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one" >
+                <div class="two" id='gif_image' >
+                  <video muted autoplay loop>
+                    <source src="assets/videos/gif.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <img src='assets/img/gif.png' alt="" width="260">
+              </div>
+              <script type="text/javascript">
+                function gif_start() {
+                  document.getElementById('gif_image').style.opacity = "1";
+                }
+
+                function gif_stop() {
+                  document.getElementById('gif_image').style.opacity = "0";
+                }
+                gif_stop()
+              </script>
+            </td>
+            <td style="padding:0px;width:75%;vertical-align:middle">
+              <strong>GIF: Agentic Generation of Interactive and Functional Object Compositions for Robot Learning</strong>
+              <br>
+              <strong>L. Xu<sup>†</sup></strong>, Z. Zhang<sup>†</sup>, M. Yan<sup>†</sup>, S. Deng, C. Xia, M. Dong, J. Chen, J. Lyu, F. Gao, Z. Zhang, H. Wang
+              <br>
+              Under review.
+              <br>
+              <p>Agentic pipeline for generating functional simulation-ready scenes from text, images, or assets.</p>
+            </td>
+          </tr>
+
           <tr bgcolor="#ffffd0" data-categories="selected uneven">
             <td style="padding:20px;width:25%;vertical-align:middle"><img src="assets/img/uenven_e2e.png" alt="" width="260"/></td>
             <td style="padding:0px;width:75%;vertical-align:middle">
               <strong>Learning Trajectory Generation on Uneven Terrain with Differentiable Trajectory Optimization and Manifold</strong>
               <br>
-              <strong>L. Xu<sup>†</sup></strong>, Z. Hou<sup>†</sup>, F. Gao
+              Z. Hou<sup>†</sup>, <strong>L. Xu</strong><sup>†</sup>, C. Wong<sup>†</sup>, Z. Wang, S. Tan, Z. Zhang, X. Zeng, Z. Wei, H. Wang, J. Hou, F. Gao
               <br>
-              On-going project.
+              Under review.
               <br>
               <p>Optimal and efficient trajecotory generation on uneven terrain with differentiable trajectory optimization and manifold.</p>
             </td>
           </tr>
 
-          <tr bgcolor="#ffffd0" data-categories="selected multip">
-            <td style="padding:20px;width:25%;vertical-align:middle"><img src="assets/img/nmoma.png" alt="" width="260"/></td>
+          <tr onmouseout="nmoma_stop()" onmouseover="nmoma_start()" bgcolor="#ffffd0" data-categories="selected multip">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one" >
+                <div class="two" id='nmoma_image' >
+                  <video muted autoplay loop>
+                    <source src="assets/videos/nmoma.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <img src='assets/img/nmoma.png' alt="" width="260">
+              </div>
+              <script type="text/javascript">
+                function nmoma_start() {
+                  document.getElementById('nmoma_image').style.opacity = "1";
+                }
+
+                function nmoma_stop() {
+                  document.getElementById('nmoma_image').style.opacity = "0";
+                }
+                nmoma_stop()
+              </script>
+            </td>
             <td style="padding:0px;width:75%;vertical-align:middle">
               <strong>Primitive-based Truncated Diffusion for Efficient Trajectory Generation of Mobile Manipulators</strong>
               <br>
-              <strong>L. Xu<sup>†</sup></strong>, C. Wong<sup>†</sup>, F. Gao
+              <strong>L. Xu<sup>†</sup></strong>, C. Wong<sup>†</sup>, Y. Zhong, J. Lin, J. Hou, F. Gao
               <br>
-              On-going project.
+              <i>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</i>, 2026
+              <br>
+              <a href="https://arxiv.org/pdf/2604.04166">Paper</a>
+              /
+              <a href="https://github.com/nmoma/nmoma/">Code</a>
+              <img src="https://img.shields.io/github/stars/nmoma/nmoma?style=social" alt="GitHub stars">
               <br>
               <p>Diverse and efficient trajectory generation for mobile manipulator with primitive-based truncated diffusion.</p>
             </td>
